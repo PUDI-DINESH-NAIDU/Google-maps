@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+</head>
+
+<body onload="showOptions()">
+    <script>
+        function openGoogleMaps() {
+            var latitude = 37.7749; // Replace with your desired latitude
+            var longitude = -122.4194; // Replace with your desired longitude
+
+            var mapsUrl = "https://www.google.com/maps?q=" + latitude + "," + longitude;
+
+            window.location.href = mapsUrl;
+        }
+
+        function openZoomMeeting() {
+            var meetingId = "your-zoom-meeting-id"; // Replace with your Zoom meeting ID
+            var zoomUrl = "https://zoom.us/j/" + meetingId;
+
+            window.location.href = zoomUrl;
+        }
+
+        function showOptions() {
+            var choice = confirm("Do you want to open Google Maps? If not, you'll be redirected to a Zoom meeting.");
+
+            if (choice) {
+                openGoogleMaps();
+            } else {
+                openZoomMeeting();
+            }
+        }
+    </script>
+</body>
+
+</html>
